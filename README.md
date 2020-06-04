@@ -1,0 +1,2 @@
+# HuajiKojima.github.io
+MyGithubBlog
