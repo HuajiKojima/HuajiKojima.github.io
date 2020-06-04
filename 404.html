@@ -1,64 +1,25 @@
 ---
-layout: page    
-header-img: "img/red.jpg"  
-description: "你来到了一片荒芜之地"
-permalink: 404.html  
+layout: default
+description: "你来到了没有知识的荒原 🙊"
+header-img: "img/404-bg.jpg"
+permalink: /404.html
 ---
 
-<p>你来到这个页面，通常有两个原因</p>
 
-<h2 id="toc_0">一、链接错误</h2>
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<div class="site-heading" id="tag-heading">
+					<h1>404</h1>
+					<span class="subheading">{{ page.description }}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
 
-<p>原因：博客搬迁造成的旧链接失效。</p>
-
-<h3 id="toc_1">解决办法一：修改原链接</h3>
-
-<p>例子：《如何搭建一个独立博客——简明Github Pages与Hexo教程》的链接是</p>
-
-<pre><code class="language-none"> http://cnfeat.com/2014/05/10/how-to-build-a-blog/</code></pre>
-
-<p>请修改成</p>
-
-<pre><code class="language-none"> http://cnfeat.com/blog/2014/05/10/how-to-build-a-blog/</code></pre>
-
-<p>改动要点：在 <strong>http://cnfeat.com/</strong> 与 <strong>日期（2014/05/10/）</strong>之间加入 <strong>blog/</strong></p>
-
-<p>标注：http://cnfeat.com/【<strong>blog/</strong>】2014/05/10/how-to-build-a-blog/</p>
-
-<p>即加入【】内的「blog/」字样。</p>
-
-<h3 id="toc_2">解决办法一：在<a href="http://cnfeat.com/archive/">文章存档</a>中找</h3>
-
-<h2 id="toc_3">二、维度攻击</h2>
-
-<p>不明力量入侵，你想要访问的页面被摧毁了。</p>
-
-
-</body>
-
-
-
-<!----------------------------------------------------------------
-         mm
-      /^(  )^\                     Ascii arts included in this page:
-      \,(..),/                     - R2D2, provided by: http://www.chris.com/
-        V~~V                       - Texts, generated from: http://www.network-science.de/ascii/  
-                                   http:// cnfeat.github.io
-            
------------------------------------------------------------------->
-
-  <style>
-    pre {
-          background: none;
-          border: none;
-    }
-  </style>
-
-  <pre>         
----x-----mm--
-      /^(  )^\
-      \,(..),/        Oops...
-        V~~V                     
-一定是发生了什么可怕的事情....
-    </pre>
-
+<script>
+	document.body.classList.add('page-fullscreen');
+</script>
