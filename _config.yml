@@ -1,7 +1,7 @@
 # Site settings
-title: CGtown
+title: CGの幻想郷
 SEOTitle: HuajiKojimaのCG Research
-header-img: img/post-bg-desk.jpg
+header-img: img/Image/SakuraDensha(4).png
 email: zyl1999zyl1999@hotmail.com
 description: "ComputerGraphicsUtopia"
 keyword: "CGtown, HuajiKojima Blog, C++, CG, ComputerGraphics, RealTime-Rendering, NPR"
@@ -11,19 +11,19 @@ github_repo: "https://github.com/HuajiKojima/HuajiKojima.github.io.git" # you co
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "吾心吾行澄如明镜，所作所为皆是正义"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "热爱图形学的大学狗一枚o(*≧▽≦)ツ┏━┓"
+sidebar-avatar: /img/Image/Avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-zhihu_username:     
-github_username:    
+zhihu_username:     zvicii
+github_username:    HuajiKojima
 facebook_username:  
 jianshu_username:   
-#twitter_username:   qiubaiying
+twitter_username:   Pixel_Xi_An
 
 
 
