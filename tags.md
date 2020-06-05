@@ -2,7 +2,7 @@
 layout: page
 title: "Tags"
 description: "哈哈，你找到了我的文章基因库"  
-header-img: "img/Images/snap2020-05-15-11-19-20.png"  
+header-img: "img/Images/snap2020-05-15-11-19-20.jpg"  
 ---
 
 ##本页使用方法
