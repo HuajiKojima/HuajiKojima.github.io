@@ -11,7 +11,7 @@ github_repo: "https://github.com/HuajiKojima/HuajiKojima.github.io.git" # you co
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "热爱图形学的大学狗一枚o(*≧▽≦)ツ┏━┓"
+sidebar-about-description: "说起来也奇怪，软件工程的大学狗喜欢上了图形学(￣▽￣)\""
 sidebar-avatar: /img/Image/Avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -21,8 +21,8 @@ RSS: false
 # weibo_username:     qiubaiying
 zhihu_username:     zvicii
 github_username:    HuajiKojima
-facebook_username:  
-jianshu_username:   
+# facebook_username:  
+# jianshu_username:   
 twitter_username:   Pixel_Xi_An
 
 
