@@ -29,7 +29,7 @@ tags:                               #标签
 
 接下来让我用这颗为图形学领域奉献的番茄先驱举个例子：
 
-![番茄](https://github.com/HuajiKojima/HuajiKojima.github.io/tree/master/ArticleImage/Article1-1.jpg "一颗即将在图形学领域留下丰功伟绩的番茄")
+![番茄](https://i.loli.net/2020/07/25/BdziRqvE9cTn3XC.jpg "一颗即将在图形学领域留下丰功伟绩的番茄")
 
 从光沿直线传播理论以及人眼成像原理来说，番茄没被光源直接照射的部分应该是除轮廓外不可视的，但现实情况是未被光源照射的部分是可被观察到的，其实如果说按照真实光照环境进行模拟的话，会发现光源打在环境中其它部分的光线会经过有限次反射或折射后再次打在番茄的任何一点上。从而将未被光源直接照射到的部分显现出来，这便是 **环境光**。但是由于如果用计算机渲染对环境中的光线进行完全模拟，则会造成非常大的性能开销，在提出此模型的20世纪70年代以及现今的实时渲染领域均不是最节约的方法（虚幻5的动态全局光照技术暂且抛开不论）。
 
@@ -37,7 +37,7 @@ tags:                               #标签
 
 综上所述，Blinn-Phong模型的环境光可被描述如下：
 
-![Blinn-Phong-Ambient-Lighting](https://github.com/HuajiKojima/HuajiKojima.github.io/tree/master/ArticleImage/Article1-2.png)
+![Blinn-Phong-Ambient-Lighting](https://i.loli.net/2020/07/25/ebLjWVksdlQg6up.png)
 
 其中Ka便是**环境光照系数**，它也可以是RGB颜色向量。从计算式中可以很明显的看出，环境光不受视线方向、光源方向以及法线的影响，也就是说无论你如何更改光源的方向，无论从哪个方向观察番茄，暗处的环境光大小都是一致的（这里说暗处是因为暗处更好观察到环境光对番茄的影响）。
 
@@ -53,18 +53,18 @@ Blinn-Phong中的漫反射模型运用的是Lambert漫反射模型，在说明�
 
 那么，问题来了：Lambert漫反射模型是如何表示明暗变化的？接下来就要引入一个概念：Lambert余弦定理。请看下图：
 
-![Lambert-Cosine-Law](https://github.com/HuajiKojima/HuajiKojima.github.io/tree/master/ArticleImage/Article1-3.png)
+![Lambert-Cosine-Law](https://i.loli.net/2020/07/25/9u2MkN3VDYKUTyj.png)
 
 Lambert模型中设定每一个着色点的明暗程度是由接收到光的能量（反映到平面上其实也就是光线的多少）所决定，接收到光的能量越多，此着色点的颜色越亮，这也是符合真实物理规律的。当我们将图中所示蓝色方块顺时针旋转60°时，我们会发现使用加粗线段所表示的平面接收到的能量小于先前接收的，在通常条件下，如果要用 **n** 与 **i** 来计算出入射角大小从而来算出被计算表面需要接收的光的能量，那显然会增加过多的计算开销。于是，Lambert模型使用 **n** 与 **i** 夹角余弦来进行计算，并得出如下结论：**接收到能量的大小与入射角余弦呈正比例关系**。
 
 于是综上所述，我们便可以得到Lambert漫反射模型的计算式：
 
-![Lambert-Diffuse-Reflection](https://github.com/HuajiKojima/HuajiKojima.github.io/tree/master/ArticleImage/Article1-4.png)
+![Lambert-Diffuse-Reflection](https://i.loli.net/2020/07/25/qFiUkWCdpBHIoSh.png)
 
 关于此计算式中几点需要注意：
 i. 设定 **I** 为光线传输着色点相应上的能量，其值会随着距离 r 增大而减小，距离为 **r** 时，传输的能量为 **I/(r·r)** 如下所示：
 
-![Light-power](https://github.com/HuajiKojima/HuajiKojima.github.io/tree/master/ArticleImage/Article1-5.png)
+![Light-power](https://i.loli.net/2020/07/25/TX1Vw2z7FhjCNY6.png)
 
 ii. 当光照沿着着色面背面发射而来，然而着色面为不透明性质时，此时可当作没有光线射在着色点上，即如果入射角余弦值为负，则默认为0，所以会有max（0，n · l）。
 
@@ -74,7 +74,7 @@ iii. Kd值（漫反射系数）可以是RGB向量，最终运算结果是结合�
 
 在解决了明暗变化以及环境光两个模型后，接下来就是镜面高光部分，如下图所示：
 
-![没错，还是那个番茄](https://github.com/HuajiKojima/HuajiKojima.github.io/tree/master/ArticleImage/Article1-6.jpg "一颗即将在图形学领域留下丰功伟绩的番茄")
+![没错，还是那个番茄](https://i.loli.net/2020/07/25/rURPjzVv1sgclaB.jpg "一颗即将在图形学领域留下丰功伟绩的番茄")
 
 这里也是Phong模型与Blinn-Phong模型有区别的地方，先说一下Phong模型中镜面高光的描述：
 
@@ -82,13 +82,13 @@ iii. Kd值（漫反射系数）可以是RGB向量，最终运算结果是结合�
 
 改进后的Blinn-Phong模型则是优化了这一部分，Blinn-Phong模型认为，当 **v** 与 **i** 的 **半程向量（Halfway Vector）**与法线向量重合时，则认为反射光线与 **v** 重合，即摄像机观察到高亮部分。计算式如下：
 
-![Blinn-Phong-Specular-Highlight](https://github.com/HuajiKojima/HuajiKojima.github.io/tree/master/ArticleImage/Article1-7.png)
+![Blinn-Phong-Specular-Highlight](https://i.loli.net/2020/07/25/rlkbnp18uQ7NZDP.png)
 
 半程向量很好求得，利用平行四边形法则计算和向量后归一化即可。其中，Ks 为环境光系数，也可为颜色向量。
 
 关于指数 **p** ：由于余弦函数受n次幂的影响表示如下：
 
-![Cosine-Function](https://github.com/HuajiKojima/HuajiKojima.github.io/tree/master/ArticleImage/Article1-8.png)
+![Cosine-Function](https://i.loli.net/2020/07/25/12xJPDYoNvjRul9.png)
 
 在现实情况中，一般的高光均多以细小光斑表现，在普通的实时渲染中，光斑可视角度较小，则相应变化幅度也必定越大，则会运用 p 来控制变化幅度。
 
@@ -96,7 +96,7 @@ iii. Kd值（漫反射系数）可以是RGB向量，最终运算结果是结合�
 
 最终三个部分相加后即可得到如下结果：
 
-![Finally](https://github.com/HuajiKojima/HuajiKojima.github.io/tree/master/ArticleImage/Article1-9.png)
+![Finally](https://i.loli.net/2020/07/25/mYRpkFCABwj49KL.png)
 
 这便是我们想要的效果。
 
