@@ -158,7 +158,7 @@ project "Sandbox"               -- 接下来是引擎编辑器的项目配置，
 
 EnntryPoint.h
 
-``` C++
+``` c++
 
 int main(int argc, char** argv)
 {
@@ -177,7 +177,7 @@ int main(int argc, char** argv)
 
 Engine.h
 
-```C++
+```c++
 
 #include <iostream>
 #include "EntryPoint.h"
@@ -186,7 +186,7 @@ Engine.h
 
 Application.cpp
 
-```C++
+```c++
 
 #include <Engine.h>
 
@@ -202,7 +202,7 @@ Application.cpp
 
 其实我也不知道该怎么称呼，总之就是想要将我们以后在引擎内核定义的对象、静态方法、函数等一系列的东西调用在游戏逻辑中的时候，可不止是一句简简单单的#include就可以解决问题，毕竟引擎内核是一串二进制代码构成的dll文件，即动态链接库。微软专门为动态链接库提供了两个语句：dllimport以及dllexport，调用方法如下：
 
-```C++
+```c++
 // 假如说我在dll里的某个头文件里定义了这么一个函数，并且是对外提供调用的
 __declspec(dllexport) void DllFunc()
 {
@@ -218,7 +218,7 @@ __declspec(dllexport) void DllFunc();
 
 还记得在命令脚本里出现的两句全局宏定义吗：**UTOPIA_PLATFORM_WINDOWS** 以及 **UTOPIA_BUILD_DLL** 。接下来就是使用这些宏定义的时候了，我们可以为引擎核心创造一个专门用来进行SharedLib生成指令的头文件（文件名“Core.h”），代码如下：
 
-```C++
+```c++
 
 #pragma once
 #ifdef UTOPIA_PLATFORM_WINDOWS                          // 平台识别宏
