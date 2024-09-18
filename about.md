@@ -5,6 +5,8 @@ description: "Who am I? "
 header-img: "img/Image/backiee-125400.jpg"
 ---
 
-目前就读于宝鸡文理学院软件工程的大学生一个（因为如果写年级的话，一年就要换一次，麻烦），热衷于计算机图形学，JRPG以及搞些乱七八糟的东西，曾经魔改过RPCS3(家用主机PlayStation3模拟器)项目，只是为了让自己的农企本子跑的起P5的30FPS（但还是没多大效果）。目前正在创建自己的第一个图形学开源项目--实时NPR游戏引擎UtopiaEngine。不定期会在此博客更新开发日志以及学习总结与笔记，欢迎各位CG大佬骚扰。以上。
+Ciallo～(∠・ω< )⌒★，我是永乐舰长，你既可以叫我永乐舰长，也可以叫我永乐（本名也有这两个字），更可以叫我永乐大帝（明皇陵能冒出烟来）。是一名C++以及C#的游戏程序员，目前在西安工作。爱好主机游戏、骑行以及电吉他。这是我利用业余时间搭建的github博客
+希望可以在这里向大家分享更多的技术方面的心得，如果有什么问题也欢迎前往我的github提交Issue探讨。
 
-A college student major in BUAS Software Engineering(because if I write grades, it will be changed once a year, and I am a lazy man). I usually research computer graphics and some messy but interesting things(Like how to create this blog use js and html). Last year I joined the RPCS3(PlayStation3 Simulator) project short times, because I want to search the way to let my AMD laptop run fluently of Persona5 (but still not much effect). Currently is developing my first CG open source project -- real-time NPR game engine which named UtopiaEngine. From time to time, I will update the development log, study summary and notes into this blog. That's all.
+Ciallo～(∠・ω< )⌒★, Capt.Yongle is here. You can call me Capt.Yongle, Yongle (my true name too) or Emperor Yongle (LOL). I'm a game developer and work in Xi'An at now. Favoriate hobbies are videogames, ride and guitar. This website
+is my technical blog what I hope to share my knowledge to you. Take issue to my github page is welcome when you have some questions or want to talk about techniques with me.
